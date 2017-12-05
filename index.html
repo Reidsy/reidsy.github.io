@@ -1,23 +1,151 @@
----
-layout: default
----
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<!doctype html>
+<html>
+    <head>
+        <title>Reidsy.com | Chris Reid</title>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link rel="publisher" href="https://plus.google.com/115890953713648814217">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="Keywords" content="Chris Reid, Reidsy">
+        <style>
+            body {
+                background:#333;
+                font-family: 'Open Sans', sans-serif;
+                font-weight:600;
+                margin:0px;
+                padding:0px 0px 20px 0px;
+            }
+            
+            .hero {
+                padding:15px 5px;
+                text-align:center
+            }
+            .hero h1 {
+                font-size:32px;
+                color:#fff;
+                display:inline;
+            }
+            .hero h2 {
+                font-size:20px;
+                display:inline;
+                color:#e1e1e1;
+                vertical-align:top;
+            }
+            
+            .button-box {
+                box-shadow:0px 0px 5px 5px #181818;
+                background-color:#f1f1f1;
+            }
+            ul.buttons {
+                margin:0px auto;
+                max-width:960px;
+                padding:10px 0px;
+                list-style-type:none;
+                text-align:center;
+                -webkit-user-select:none;
+                -moz-user-select:-moz-none;
+                -ms-user-select:none;
+                user-select:none;
+            }
+            ul.buttons li {
+                display:inline-block;
+                padding: 10px;
+                margin:0px;
+            }
+            ul.buttons li a {
+                display:block;
+                padding:30px 0px;
+                width:280px;
+                text-decoration:none;
+                font-size: 28px;
+            }
+            
+            /* Colors */
+            ul.buttons li.google-plus a {
+                background-color:#D14836;
+                color:#fff;
+            }
+            ul.buttons li.google-plus:active a {
+                background-color:#881F12;
+            }
+            ul.buttons li.linkedin a {
+                background-color:#71C5EF;
+                color: #fff;
+            }
+            ul.buttons li.linkedin:active a {
+                background-color:#25759b;
+            }
+            ul.buttons li.github a {
+                background-color:#E5E5E5;
+                color:#000;
+            }
+            ul.buttons li.github:active a {
+                background-color:#acacac;
+            }
+            ul.buttons li.stack-overflow a {
+                background-color:#f67c16;
+                color:#fff;
+            }
+            ul.buttons li.stack-overflow:active a {
+                background-color:#a04c07;
+            }
+            ul.buttons li.email a {
+                background-color:#ffc800;
+                color:#000;
+            }
+            ul.buttons li.email:active a {
+                background-color:#a68200;
+            }
+        </style>
+        <!-- google analytics tracking code -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-45590118-1', 'reidsy.com');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <div class="hero">
+            <h1>Chris Reid</h1>
+            <h2>Software Dev</h2>
+        </div>
+        <div class="button-box">
+            <ul class="buttons">
+                <li class="google-plus">
+                    <a href="https://plus.google.com/+ChrisReid">
+                        <i class="fa fa-google-plus fa-lg"></i>
+                        Google+
+                    </a>
+                </li>
+                <li class="linkedin">
+                    <a href="http://au.linkedin.com/pub/chris-reid/52/113/569">
+                        <i class="fa fa-linkedin fa-lg"></i>
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="github">
+                    <a href="https://github.com/Reidsy">
+                        <i class="fa fa-github fa-lg"></i>
+                        GitHub
+                    </a>
+                </li>
+                <li class="stack-overflow">
+                    <a href="http://stackoverflow.com/users/784584/reidsy">
+                        <i class="fa fa-stack-overflow fa-lg"></i>
+                        Stack Overflow
+                    </a>
+                </li>
+                <li class="email">
+                    <a href="mailto:contactme@reidsy.com">
+                        <i class="fa fa-envelope fa-lg"></i>
+                        Email
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
